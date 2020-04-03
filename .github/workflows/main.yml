@@ -27,6 +27,8 @@ jobs:
     
     - name: Login to Docker
       run: |
+        echo "DOCKER_NAME: ${DOCKER_NAME}"
+        echo "DOCKER_PASSWORD: ${DOCKER_PASSWORD}"
         docker login -u ${DOCKER_NAME} -p ${DOCKER_PASSWORD}
 
     # Runs a single command using the runners shell
