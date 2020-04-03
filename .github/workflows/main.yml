@@ -22,8 +22,8 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
       env:
-        DOCKER_USER: ${{ secret.DOCKER_USER }}
-        DOCKER_PASSWORD: ${{ secret.DOCKER_PASWORD }}
+        DOCKER_USER: ${{ secrets.DOCKER_USER }}
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASWORD }}
     
     - name: Login to Docker
       run: |
